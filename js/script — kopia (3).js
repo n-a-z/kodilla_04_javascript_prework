@@ -1,6 +1,4 @@
-var argButtonName, buttonRock, buttonPaper, butonScissors, resultPlayer, resultComputer;
-resultPlayer = 0;
-resultComputer = 0;
+var argButtonName, buttonRock, buttonPaper, butonScissors;
 
 /**
  * Button inputs
@@ -37,24 +35,19 @@ function buttonClicked(argButtonName) {
     console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
       printMessage('Wygrywasz!');
-      resultPlayer++;
     } 
     else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
       printMessage('Wygrywasz!');
-      resultPlayer++;
     } 
     else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
       printMessage('Wygrywasz!');
-      resultPlayer++;
     } 
     else if (argPlayerMove == argComputerMove) {
       printMessage('Remis!');
     } else {
       printMessage('Przegrywasz :(');
-      resultComputer++;
     }
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
-    printMessage('Gracz: ' + resultPlayer + ' - ' + resultComputer + ' :Komputer');
   }
 
   playerMove = argButtonName;
