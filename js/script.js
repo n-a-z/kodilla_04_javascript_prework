@@ -9,7 +9,7 @@ function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
 
-  var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber;
+  var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, printResult;
 
   /**
    * Calculating Moves
@@ -54,7 +54,6 @@ function buttonClicked(argButtonName) {
       resultComputer++;
     }
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
-    printMessage('Gracz: ' + resultPlayer + ' - ' + resultComputer + ' :Komputer');
   }
 
   playerMove = argButtonName;
@@ -64,6 +63,8 @@ function buttonClicked(argButtonName) {
   computerMove = getMoveName(randomNumber);
   console.log('ruch komputera to: ' + computerMove);
   displayResult(playerMove, computerMove);
+  printResult = document.getElementById("results");
+  printResult.innerHTML = "Gracz: " + resultPlayer + " - " + resultComputer + " :Komputer"
 
 }
 buttonRock = document.getElementById('button-rock');
